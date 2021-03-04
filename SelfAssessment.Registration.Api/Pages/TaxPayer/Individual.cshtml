@@ -1,0 +1,210 @@
+﻿@page
+@model SelfAssessment.Registration.Api.Pages.TaxPayer.IndividualModel
+@{
+    Layout = "_Layout2";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+                <div class="card wizard-card" data-color="purple" id="wizard">
+                    <form>
+
+                        <div class="wizard-header">
+                            <div class="row">
+
+                                <div class="col-md-3"><img src="~/assets/img/Ogun WEB-LOGO.png" style="height:35px;width:150px"></div>
+
+                                <div class="col-md-6 text-center">
+                                    <h4 class="wizard-title" style="color: green;">
+                                        Individual Registration
+                                    </h4>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+                        <div class="wizard-navigation">
+                            <ul>
+                                <li><a href="#location" data-toggle="tab">Step 1</a></li>
+                                <li><a href="#type" data-toggle="tab">Step 2</a></li>
+                                <li><a href="#facilities" data-toggle="tab">Step 3</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content">
+
+                            <div class="tab-pane" id="location">
+                                <h4 class="info-text">Personal Information</h4>
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Courtesy title</label>
+                                            <input type="text" asp-for="@Model.individual.Courtesy" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Surname</label>
+                                            <input type="text" asp-for="@Model.individual.Surname" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Firstname</label>
+                                            <input type="text" asp-for="@Model.individual.Firstname" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Othername</label>
+                                            <input type="text" asp-for="@Model.individual.Othername" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Phone No 1</label>
+                                            <input type="text" asp-for="@Model.individual.Phone1" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Phone No 2 </label>
+                                            <input type="text" asp-for="@Model.individual.Phone2" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Occupation</label>
+                                            <input type="text" as-for="@Model.individual.Occupation" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Gender</label>
+                                            <select class="form-control" asp-for="@Model.individual.GenderId">
+                                                <option>select gender</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="type">
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Marital status</label>
+                                            <select class="form-control" asp-for="@Model.individual.MaritalStatusId">
+                                                <option>select marital status</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="label-up">
+                                            <div class="form-group">
+                                                <label class="control-label">Date of birth</label>
+                                                <input type="date" class="form-control" asp-for="@Model.individual.DateofBirth" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Email address</label>
+                                            <input type="email" class="form-control" asp-for="@Model.individual.Email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Nationality</label>
+                                            <select class="form-control" asp-for="@Model.individual.Nationality">
+                                                <option>Nigeria</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="facilities">
+                                <h4 class="info-text">Address</h4>
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">State</label>
+                                            <select class="form-control" asp-for="@Model.individual.StateId">
+                                                <option>select state</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">State LGA area</label>
+                                            <select class="form-control" asp-for="@Model.individual.LGAId">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Street no & street name</label>
+                                            <input type="text" class="form-control" asp-for="@Model.individual.Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Area / Landmark</label>
+                                            <input type="text" class="form-control" asp-for="@Model.individual.Landmark">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">City</label>
+                                            <select class="form-control" asp-for="@Model.individual.City">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Nearest Tax offices</label>
+                                            <select class="form-control" asp-for="@Model.individual.TaxOffice">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">firs Tax Identification no</label>
+                                            <input type="text" class="form-control" asp-for="@Model.individual.TaxNo" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Payers type</label>
+                                            <select class="form-control" asp-for="@Model.individual.PayerType">
+                                                <option>Employed</option>
+                                                <option>Unemployed</option>
+                                                <option>Student</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="wizard-footer">
+                            <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Next' />
+                                <input type='button' class='btn btn-finish btn-fill btn-primary btn-wd' name='finish' value='Finish' />
+                            </div>
+                            <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- wizard container -->
+        </div>
+    </div> <!-- row -->
+</div>

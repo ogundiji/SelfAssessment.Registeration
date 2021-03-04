@@ -1,0 +1,69 @@
+body {
+    background-color: #E5E5E5;
+    color: #3C4858; }
+
+.move-homepage{
+    position:relative;
+    left:20%;
+    top:10px;
+    color:white;
+    font-weight: 400;
+}
+
+.wizard-container{
+    padding-top: 100px;
+    z-index: 3; }
+
+    .card {
+        background-color: #FFFFFF;
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 6px;
+        color: rgba(0,0,0, 0.87);
+        background: #fff; }
+
+    .wizard-card{
+        min-height: 610px;
+        min-width: 910px;
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+
+        .image-container {
+            min-height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            position: relative; }
+            .image-container:before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background: #000000;
+              opacity: .3; }
+
+              .wizard-card .wizard-header {
+                text-align: center;
+                padding: 25px 0 35px; }
+                .wizard-card .wizard-header h5 {
+                  margin: 5px 0 0; }
+
+
+                  .footer {
+                    position: relative;
+                    bottom: 20px;
+                    right: 0px;
+                    width: 100%;
+                    color: #FFFFFF;
+                    z-index: 4;
+                    text-align: right;
+                    margin-top: 60px;
+                    text-shadow: 0 0px 1px black; }
+                    .footer a {
+                      color: #FFFFFF; }
+                    .footer .heart {
+                        color: #FF3B30; }
+
+                   
+    

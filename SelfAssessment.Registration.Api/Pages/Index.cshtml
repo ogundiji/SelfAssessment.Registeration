@@ -1,0 +1,170 @@
+﻿@page
+@model SelfAssessment.Registration.Api.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="wizard-container">
+            <div class="card wizard-card" data-color="purple" id="wizard">
+                <form>
+                    <div class="wizard-header">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-6 text-center">
+                                <h4 class="wizard-title" style="color: green;">
+                                    Tax Payers Registration
+                                </h4>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="margin-left:22px;">
+                            <div class="col-sm-3">
+                                <select class="form-control" id="search" required>
+                                    <option value="">Select Registeration Type</option>
+                                    <option value="Individual">Individual</option>
+                                    <option value="Organisation">Organisation</option>
+                                </select>
+                                
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="individual">
+                                        <option value="">select search criteria</option>
+                                        <option value="STIN">STIN</option>
+                                        <option value="Single">Single name</option>
+                                        <option value="Email">Email</option>
+                                        <option value="phone">phone no</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="individual2">
+                                <div class="col-sm-1">
+                                    <div class="form-group">
+                                        <input type="text" style="width:250px;" class="form-control" id="searchText" placeholder="enter search text" required />
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="position: relative;top:-50px; left:94%;">
+                                    <input type="button" class="btn btn-success" value="Search" id="searchIndividual">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="individual3">
+                        <div style="margin-top:5px;">
+                            <div class="row" id="individual3">
+                                <div class="col-sm-6 col-sm-offset-1">
+                                    <span>Can't find tax payer in the list below?  </span><a href="wizard-list-place.html" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> click here</a> to register
+                                </div>
+                                <div class="col-md-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:20px;position:relative;left:-5%;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-11 col-sm-offset-1">
+                                        <table id="example" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>S/n</th>
+                                                    <th>Payer name</th>
+                                                    <th>STIN</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="searchData">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Ogundiji IDiat folashade adetori</td>
+                                                    <td>2398-OP87</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Ogundiji yusuf</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail2.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Ogundiji waliu</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Ismail misbaudeen</td>
+                                                    <td>2398-OPYU</td>
+                                                    <td>afolesmith@gmail.com</td>
+                                                    <td>0908888834</td>
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <br />
+        </div>
+    </div> <!-- wizard container -->
+</div>
